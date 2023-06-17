@@ -6,6 +6,18 @@ from .models import Digimon
 
 # Create your views here.
 def index(request):
+    now = "xxxx"
+    html = f'''
+    <html>
+        <body>
+            <h1>Hello from Vercel!</h1>
+            <p>The current time is { now }.</p>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
+
+def _index(request):
   digimons = Digimon.objects.all()
 
   context = {
